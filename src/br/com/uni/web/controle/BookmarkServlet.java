@@ -66,8 +66,7 @@ public class BookmarkServlet extends HttpServlet {
 		
 		if("gravarEditar".equals(act)){
 			//editar
-			Bookmark bookmark = new Bookmark(descricao, link);
-			bookmark.setId(Integer.parseInt(id));
+			Bookmark bookmark = new Bookmark(Integer.parseInt(id), descricao, link);
 			dao.editar(bookmark);
 		}
 		

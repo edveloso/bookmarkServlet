@@ -1,6 +1,8 @@
 package br.com.uni.modelo;
 
-public class Bookmark {
+import java.io.Serializable;
+
+public class Bookmark  implements Serializable{
    
 	 private static int COUNT;
 	 
@@ -15,6 +17,12 @@ public class Bookmark {
 		 id = Bookmark.COUNT++;
 	 }
 
+	 public Bookmark(int id, String descricao, String link){
+		 this.descricao = descricao;
+		 this.link = link;
+		 this.id = id;
+	 }
+	 
 	 public Bookmark(String descricao, String link){
 		 this();
 		 this.descricao = descricao;
